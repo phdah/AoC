@@ -1,3 +1,0 @@
-/home/phdah/repos/privat/learn_c/advent_of_code/2022/day_2/build/CMakeFiles/rock_paper_scissors.dir
-/home/phdah/repos/privat/learn_c/advent_of_code/2022/day_2/build/CMakeFiles/edit_cache.dir
-/home/phdah/repos/privat/learn_c/advent_of_code/2022/day_2/build/CMakeFiles/rebuild_cache.dir
