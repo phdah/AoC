@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/phdah/repos/privat/learn_c/advent_of_code/2022/day_2/build",
+  "command": "/usr/bin/c++   -g -std=gnu++11 -o CMakeFiles/rock_paper_scissors.dir/rock_paper_scissors.cpp.o -c /home/phdah/repos/privat/learn_c/advent_of_code/2022/day_2/rock_paper_scissors.cpp",
+  "file": "/home/phdah/repos/privat/learn_c/advent_of_code/2022/day_2/rock_paper_scissors.cpp"
+},
+{
+  "directory": "/home/phdah/repos/privat/learn_c/advent_of_code/2022/day_2/build",
+  "command": "/usr/bin/c++   -g -std=gnu++11 -o CMakeFiles/rock_paper_scissors.dir/game.cpp.o -c /home/phdah/repos/privat/learn_c/advent_of_code/2022/day_2/game.cpp",
+  "file": "/home/phdah/repos/privat/learn_c/advent_of_code/2022/day_2/game.cpp"
+}
+]

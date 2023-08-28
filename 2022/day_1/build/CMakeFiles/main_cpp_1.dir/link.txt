@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/main_cpp_1.dir/calorie_counting_1.cpp.o -o main_cpp_1 
