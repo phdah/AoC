@@ -1,0 +1,153 @@
+{
+    "version": "1.4.0",
+    "project": {
+        "name": "scala",
+        "directory": "/home/phdah/repos/privat/AoC/2022/day_1/scala",
+        "workspaceDir": "/home/phdah/repos/privat/AoC/2022/day_1/scala",
+        "sources": [
+            "/home/phdah/repos/privat/AoC/2022/day_1/scala/src/main/scala",
+            "/home/phdah/repos/privat/AoC/2022/day_1/scala/src/main/scala-2.12",
+            "/home/phdah/repos/privat/AoC/2022/day_1/scala/src/main/scala-2",
+            "/home/phdah/repos/privat/AoC/2022/day_1/scala/src/main/java",
+            "/home/phdah/repos/privat/AoC/2022/day_1/scala/target/scala-2.12/src_managed/main",
+            "/home/phdah/repos/privat/AoC/2022/day_1/scala/calories_counting.scala"
+        ],
+        "dependencies": [
+            
+        ],
+        "classpath": [
+            "/home/phdah/.sbt/boot/scala-2.12.15/lib/scala-library.jar"
+        ],
+        "out": "/home/phdah/repos/privat/AoC/2022/day_1/scala/.bloop/scala",
+        "classesDir": "/home/phdah/repos/privat/AoC/2022/day_1/scala/.bloop/scala/scala-2.12/classes",
+        "resources": [
+            "/home/phdah/repos/privat/AoC/2022/day_1/scala/src/main/resources",
+            "/home/phdah/repos/privat/AoC/2022/day_1/scala/target/scala-2.12/resource_managed/main"
+        ],
+        "scala": {
+            "organization": "org.scala-lang",
+            "name": "scala-compiler",
+            "version": "2.12.15",
+            "options": [
+                
+            ],
+            "jars": [
+                "/home/phdah/.sbt/boot/scala-2.12.15/lib/scala-library.jar",
+                "/home/phdah/.sbt/boot/scala-2.12.15/lib/scala-compiler.jar",
+                "/home/phdah/.sbt/boot/scala-2.12.15/lib/scala-reflect.jar",
+                "/home/phdah/.sbt/boot/scala-2.12.15/lib/scala-xml_2.12.jar",
+                "/home/phdah/.sbt/boot/scala-2.12.15/lib/jline.jar"
+            ],
+            "setup": {
+                "order": "mixed",
+                "addLibraryToBootClasspath": true,
+                "addCompilerToClasspath": false,
+                "addExtraJarsToClasspath": false,
+                "manageBootClasspath": true,
+                "filterLibraryFromClasspath": true
+            }
+        },
+        "java": {
+            "options": [
+                
+            ]
+        },
+        "test": {
+            "frameworks": [
+                {
+                    "names": [
+                        "org.scalacheck.ScalaCheckFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs2.runner.Specs2Framework",
+                        "org.specs2.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.specs.runner.SpecsFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "org.scalatest.tools.Framework",
+                        "org.scalatest.tools.ScalaTestFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "com.novocode.junit.JUnitFramework"
+                    ]
+                },
+                {
+                    "names": [
+                        "munit.Framework"
+                    ]
+                }
+            ],
+            "options": {
+                "excludes": [
+                    
+                ],
+                "arguments": [
+                    
+                ]
+            }
+        },
+        "platform": {
+            "name": "jvm",
+            "config": {
+                "home": "/usr/lib/jvm/java-11-openjdk-amd64",
+                "options": [
+                    "-Duser.dir=/home/phdah/repos/privat/AoC/2022/day_1/scala"
+                ]
+            },
+            "mainClass": [
+                
+            ]
+        },
+        "resolution": {
+            "modules": [
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.12.15",
+                    "configurations": "default",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "/home/phdah/.sbt/boot/scala-2.12.15/lib/scala-library.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "/home/phdah/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.15/scala-library-2.12.15-sources.jar"
+                        }
+                    ]
+                },
+                {
+                    "organization": "org.scala-lang",
+                    "name": "scala-library",
+                    "version": "2.12.15",
+                    "configurations": "optional",
+                    "artifacts": [
+                        {
+                            "name": "scala-library",
+                            "path": "/home/phdah/.sbt/boot/scala-2.12.15/lib/scala-library.jar"
+                        },
+                        {
+                            "name": "scala-library",
+                            "classifier": "sources",
+                            "path": "/home/phdah/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.15/scala-library-2.12.15-sources.jar"
+                        }
+                    ]
+                }
+            ]
+        },
+        "tags": [
+            "library"
+        ]
+    }
+}
