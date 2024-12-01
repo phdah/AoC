@@ -8,6 +8,12 @@ void FileOps::getLineContentTwoColumns(const std::string &line, std::vector<int>
     lhVec.push_back(second);
 };
 
+void FileOps::countVectorNumbers(std::vector<int> &resultVec, const std::vector<int> &inputVec) {
+    for (auto &element : inputVec) {
+        resultVec[element-1]++;
+    }
+};
+
 int firstSolution(std::string fileName) {
     FileOps file(fileName);
     std::ifstream &fileContents = file.getFile();
@@ -30,3 +36,26 @@ int firstSolution(std::string fileName) {
 
     return resultFirst;
 };
+
+
+int secondSolution(std::string fileName) {
+    FileOps file(fileName);
+    std::ifstream &fileContents = file.getFile();
+
+    std::vector<int> rhVec, lhVec;
+    std::string line;
+    while (std::getline(fileContents, line)) {
+        file.getLineContentTwoColumns(line, rhVec, lhVec);
+    }
+    fileContents.close();
+
+    std::vector<int>  lhCountVec(lhVec.size(), 0);
+    file.countVectorNumbers(lhCountVec, lhVec);
+
+    int resultSecond = 0;
+    for (auto & i : rhVec) {
+        resultSecond += i * lhCountVec[i-1];
+    }
+
+    return resultSecond;
+}
