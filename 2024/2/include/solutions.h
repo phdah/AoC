@@ -19,15 +19,22 @@ class Levels {
     public:
         Levels(const std::string &line): line(line) {};
 
-        const int isSafe();
+        const int isSafeFirst();
+        const int isSafeSecond();
 
     private:
         const std::string &line;
+
         enum Direction currDirection = STARTING;
 
         const std::vector<int> getLevels();
 
-        const bool noSafeLogic(const std::vector<int> levels);
+        const bool logic(const int &diff);
+
+        const bool noSafeLogicFirst(const std::vector<int> &levels);
+
+        const bool bruteForceCheckWindows(const std::vector<int> &levels, const int i);
+        const bool noSafeLogicSecond(std::vector<int> &levels);
 
         const bool invalidDirection(const int &diff);
 
