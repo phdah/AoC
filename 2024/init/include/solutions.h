@@ -17,9 +17,17 @@ class FileOps {
             }
         };
 
-        // Get the file
+        // Get the file contents as is
         std::ifstream &getFile() {
             return file;
+        };
+
+        // Get all lines from the file as one string
+        const std::string getFileContentAsOneString() {
+            std::string line(
+                (std::istreambuf_iterator<char>(this->file)),
+                std::istreambuf_iterator<char>());
+            return line;
         };
 
     private:
