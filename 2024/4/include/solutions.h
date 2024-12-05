@@ -29,9 +29,15 @@ class Matrix {
 
         // Count the entire matrix, order of row -> column
         const int countNrPat();
+        // Marginal lets the iteration skip edges since they will never work
+        const int countNrStar(const int &marginal);
 
         // Search around char - Brut Force all directions
         const int countAroundCharPat(int &row, int &col);
+        // Search around the char, and find the star
+        const int countAroundCharStar(int &row, int &col);
+        // Find out if the star matches the pattern
+        const bool starMatch(char &rightUpper, char &leftUpper, char &rightDown, char &leftDown);
 
         // Decrement/increment vector
         const std::vector<int> decrementVec(const int startVal);

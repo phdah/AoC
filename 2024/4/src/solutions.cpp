@@ -27,6 +27,14 @@ const int Matrix::countNrPat() {
     }
     return searchFounds;
 }
+
+const int Matrix::countNrStar(const int &marginal) {
+    int searchFounds = 0;
+    for (int row=0+marginal; row<this->matrixSize.first-marginal; row++) {
+        for (int col=0+marginal; col<this->matrixSize.second-marginal; col++) {
+            if (this->data[row][col] == 'A') {
+                searchFounds += this->countAroundCharStar(row, col);
+            }
         }
     }
     return searchFounds;
@@ -106,8 +114,36 @@ const int Matrix::countAroundCharPat(int &row, int &col) {
 
     return searchFounds;
 }
+const bool Matrix::starMatch(
+    char &rightUpper,
+    char &leftUpper,
+    char &rightDown,
+    char &leftDown) {
+    // pat[0] = M, pat[2] = S
+    if (
+        (rightUpper==this->pat[0] && leftDown==this->pat[2] ||
+        rightUpper==this->pat[2] && leftDown==this->pat[0])
+        &&
+        (rightDown==this->pat[0] && leftUpper==this->pat[2] ||
+        rightDown==this->pat[2] && leftUpper==this->pat[0])
+    ) return true;
 
+    return false;
+}
 
+const int Matrix::countAroundCharStar(int &row, int &col) {
+    // Get the "star" around the middle char
+    char rightUpper = this->data[row-1][col+1];
+    char leftUpper = this->data[row-1][col-1];
+    char rightDown = this->data[row+1][col+1];
+    char leftDown = this->data[row+1][col-1];
+
+    if (
+        this->starMatch(rightUpper, leftUpper, rightDown, leftDown)
+    ) return 1;
+
+    return 0;
+}
 
 int firstSolution(std::string fileName) {
     FileOps file(fileName);
@@ -125,7 +161,12 @@ int firstSolution(std::string fileName) {
 int secondSolution(std::string fileName) {
     FileOps file(fileName);
     std::ifstream &fileContents = file.getFile();
+    std::string pat = "MAS";
+    Matrix matrix(fileContents, pat);
 
     int resultSecond = 0;
+    const int marginal = 1;
+    resultSecond += matrix.countNrStar(marginal);
+
     return resultSecond;
 }
