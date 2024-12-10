@@ -19,7 +19,7 @@ class Update {
 
     // Vector of update integers
     std::vector<int> vec;
-    // Middle integer of the update vector
+    // Middle integer of the update vector (a number can never be 0)
     int middleNumber;
 
     private:
@@ -49,7 +49,12 @@ class Printer {
         // Check if the rule exists for the given input
         const bool checkRule(const int&lh, const int &rh);
         // Check if an entire update is correct, return middle number
-        const int checkUpdate(const Update &update);
+        const bool checkUpdate(const std::vector<int> &updateVec);
+        // Reorder the vector based on old and new index
+        const std::vector<int> reorderVector(const std::vector<int> &vec, const int &oldIndex, const int &newIndex);
+        // Recursively check all updates, where we apply the reordering of the
+        // vector for each bad rule iteratively.
+        const int recursiveCheckUpdate(const std::vector<int> &vec);
 
         // Util to cout the map
         void coutPageOrdersMap(const int &lh);
