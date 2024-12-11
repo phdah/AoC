@@ -1,7 +1,7 @@
 #include "solutions.h"
 #include <string>
 
-int main(int argc, char **argv) {
+int main(int argc, char** argv) {
     std::string fileName = "../example_input.txt";
     if (argc > 1) fileName = argv[1];
 
